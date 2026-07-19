@@ -4,8 +4,8 @@
   "description": "Einfacher Button-Tracker",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a1a2e",
-  "theme_color": "#1a1a2e",
+  "background_color": "#f5f5f7",
+  "theme_color": "#f5f5f7",
   "orientation": "portrait",
   "icons": [
     {

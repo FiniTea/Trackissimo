@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#f5f5f7">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icon-192.png">
     <title>Tracker</title>
@@ -19,16 +19,16 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #1a1a2e;
-            color: #eee;
+            background: #f5f5f7;
+            color: #1d1d1f;
             min-height: 100vh;
             padding: 20px;
-            padding-top: env(safe-area-inset-top, 20px);
-            padding-bottom: env(safe-area-inset-bottom, 20px);
+            padding-top: max(20px, env(safe-area-inset-top));
+            padding-bottom: max(20px, env(safe-area-inset-bottom));
         }
 
         .container {
-            max-width: 400px;
+            max-width: 420px;
             margin: 0 auto;
         }
 
@@ -42,21 +42,22 @@
         .buttons {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
         .btn {
-            padding: 25px;
-            font-size: 1.2rem;
+            padding: 20px;
+            font-size: 1.1rem;
             font-weight: 600;
             border: none;
-            border-radius: 16px;
-            background: #2d2d44;
-            color: #fff;
+            border-radius: 14px;
+            background: #fff;
+            color: #1d1d1f;
             cursor: pointer;
-            transition: transform 0.1s, background 0.3s;
+            transition: transform 0.1s, background 0.3s, box-shadow 0.2s;
             position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .btn:active {
@@ -69,9 +70,9 @@
         }
 
         .btn .hint {
-            font-size: 0.75rem;
-            opacity: 0.6;
-            margin-top: 5px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+            margin-top: 4px;
             font-weight: 400;
         }
 
@@ -81,56 +82,145 @@
             top: 50%;
             transform: translateY(-50%);
             font-size: 0.85rem;
-            opacity: 0.7;
+            opacity: 0.5;
+            font-weight: 500;
         }
 
-        /* Flash-Farben beim Tippen */
-        .btn.flash-green { background: #22c55e; }
-        .btn.flash-red { background: #ef4444; }
-        .btn.flash-yellow { background: #eab308; }
-        .btn.flash-brown { background: #92400e; }
+        .btn.flash-green { background: #22c55e; color: #fff; }
+        .btn.flash-red { background: #ef4444; color: #fff; }
+        .btn.flash-yellow { background: #eab308; color: #fff; }
+        .btn.flash-brown { background: #92400e; color: #fff; }
+        .btn.flash-delete { background: #94a3b8; color: #fff; }
 
-        .tabs {
+        .main-tabs {
             display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
+            gap: 8px;
+            margin-bottom: 12px;
         }
 
-        .tab {
+        .main-tab {
             flex: 1;
-            padding: 10px;
-            background: #2d2d44;
+            padding: 10px 8px;
+            background: #fff;
             border: none;
             border-radius: 10px;
-            color: #888;
-            font-size: 0.9rem;
+            color: #86868b;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .main-tab.active {
+            background: #1d1d1f;
+            color: #fff;
+        }
+
+        .sub-tabs {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .sub-tab {
+            padding: 6px 14px;
+            background: #e5e5ea;
+            border: none;
+            border-radius: 8px;
+            color: #636366;
+            font-size: 0.75rem;
+            font-weight: 500;
             cursor: pointer;
         }
 
-        .tab.active {
-            background: #3d3d5c;
+        .sub-tab.active {
+            background: #636366;
             color: #fff;
         }
 
         .chart-container {
-            background: #2d2d44;
+            background: #fff;
             border-radius: 16px;
-            padding: 15px;
+            padding: 20px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            min-height: 280px;
         }
 
-        .chart {
-            height: 200px;
+        .chart-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* Pie Chart */
+        .pie-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .pie-wrapper {
             position: relative;
-            overflow-x: auto;
+            width: 180px;
+            height: 180px;
         }
 
-        .chart-inner {
+        .pie-svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .pie-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .pie-percent {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .pie-label {
+            font-size: 0.75rem;
+            color: #86868b;
+        }
+
+        .pie-legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Bar Chart */
+        .bar-chart {
             display: flex;
             align-items: flex-end;
-            height: 100%;
-            gap: 3px;
-            min-width: 100%;
+            justify-content: space-around;
+            height: 180px;
+            padding: 0 10px;
+            gap: 8px;
         }
 
         .bar-group {
@@ -138,34 +228,135 @@
             flex-direction: column;
             align-items: center;
             flex: 1;
-            min-width: 40px;
+            max-width: 50px;
+        }
+
+        .bar-pair {
+            display: flex;
+            gap: 3px;
+            align-items: flex-end;
+            height: 150px;
         }
 
         .bar {
-            width: 100%;
-            max-width: 30px;
+            width: 14px;
             border-radius: 4px 4px 0 0;
             transition: height 0.3s;
+            min-height: 2px;
         }
 
         .bar-label {
             font-size: 0.65rem;
-            color: #888;
-            margin-top: 5px;
-            white-space: nowrap;
+            color: #86868b;
+            margin-top: 6px;
+            text-align: center;
         }
 
+        /* Heatmap */
+        .heatmap-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .heatmap-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .heatmap-nav button {
+            background: #e5e5ea;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .heatmap-month {
+            font-weight: 600;
+        }
+
+        .heatmap-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+        }
+
+        .heatmap-header {
+            font-size: 0.65rem;
+            color: #86868b;
+            text-align: center;
+            padding: 4px 0;
+        }
+
+        .heatmap-day {
+            aspect-ratio: 1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .heatmap-day.empty {
+            background: transparent;
+        }
+
+        .heatmap-day.zero {
+            background: #fecaca;
+            color: #991b1b;
+        }
+
+        .heatmap-day.one {
+            background: #bbf7d0;
+            color: #166534;
+        }
+
+        .heatmap-day.two {
+            background: #22c55e;
+            color: #fff;
+        }
+
+        .heatmap-day.future {
+            background: #f3f4f6;
+            color: #9ca3af;
+        }
+
+        .heatmap-legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.7rem;
+        }
+
+        .heatmap-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .heatmap-legend-box {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+        }
+
+        /* History */
         .history {
-            background: #2d2d44;
+            background: #fff;
             border-radius: 16px;
             padding: 15px;
-            max-height: 300px;
+            max-height: 250px;
             overflow-y: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .history-title {
-            font-size: 0.9rem;
-            color: #888;
+            font-size: 0.85rem;
+            font-weight: 600;
             margin-bottom: 10px;
         }
 
@@ -173,7 +364,7 @@
             display: flex;
             align-items: center;
             padding: 10px 0;
-            border-bottom: 1px solid #3d3d5c;
+            border-bottom: 1px solid #f0f0f0;
             gap: 10px;
         }
 
@@ -182,26 +373,27 @@
         }
 
         .history-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             flex-shrink: 0;
         }
 
         .history-text {
             flex: 1;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .history-time {
-            font-size: 0.8rem;
-            color: #888;
+            font-size: 0.75rem;
+            color: #86868b;
         }
 
         .no-data {
             text-align: center;
-            color: #666;
+            color: #86868b;
             padding: 30px;
+            font-size: 0.9rem;
         }
 
         .clear-btn {
@@ -209,34 +401,13 @@
             width: 100%;
             margin-top: 20px;
             padding: 12px;
-            background: #3d3d5c;
+            background: #fff;
             border: none;
             border-radius: 10px;
-            color: #888;
-            font-size: 0.85rem;
+            color: #86868b;
+            font-size: 0.8rem;
             cursor: pointer;
-        }
-
-        .legend {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.75rem;
-            color: #888;
-        }
-
-        .legend-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
         }
     </style>
 </head>
@@ -246,39 +417,29 @@
 
         <div class="buttons">
             <button class="btn" id="btn1" data-button="1">
-                Button 1
-                <div class="hint">1x Tap = Grün | 2x Tap = Rot</div>
+                Frei / Besetzt
+                <div class="hint">1x = Frei | 2x = Besetzt | 3x = Löschen</div>
                 <span class="cooldown"></span>
             </button>
             <button class="btn" id="btn2" data-button="2">
-                Button 2
-                <div class="hint">1x Tap = Gelb | 2x Tap = Braun</div>
+                Vorne / Hinten
+                <div class="hint">1x = Vorne | 2x = Hinten | 3x = Löschen</div>
                 <span class="cooldown"></span>
             </button>
             <button class="btn" id="btn3" data-button="3">
-                Button 3
-                <div class="hint">1x Tap = Grün</div>
+                Zapupa
+                <div class="hint">1x = Eintrag | 3x = Löschen</div>
                 <span class="cooldown"></span>
             </button>
         </div>
 
-        <div class="tabs">
-            <button class="tab active" data-view="week">7 Tage</button>
-            <button class="tab" data-view="month">30 Tage</button>
-            <button class="tab" data-view="all">Alles</button>
+        <div class="main-tabs">
+            <button class="main-tab active" data-tab="freibesetzt">Frei/Besetzt</button>
+            <button class="main-tab" data-tab="vornehinten">Vorne/Hinten</button>
+            <button class="main-tab" data-tab="zapupa">Zapupa</button>
         </div>
 
-        <div class="chart-container">
-            <div class="legend">
-                <div class="legend-item"><span class="legend-dot" style="background:#22c55e"></span> Grün</div>
-                <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span> Rot</div>
-                <div class="legend-item"><span class="legend-dot" style="background:#eab308"></span> Gelb</div>
-                <div class="legend-item"><span class="legend-dot" style="background:#92400e"></span> Braun</div>
-            </div>
-            <div class="chart">
-                <div class="chart-inner" id="chart"></div>
-            </div>
-        </div>
+        <div id="chart-area"></div>
 
         <div class="history">
             <div class="history-title">Letzte Einträge</div>
@@ -289,8 +450,10 @@
     </div>
 
     <script>
-        const COOLDOWN_MS = 60 * 1000; // 1 Minute
+        const COOLDOWN_MS = 5 * 1000; // 5 Sekunden
         const DOUBLE_TAP_MS = 300;
+        const TRIPLE_TAP_MS = 500;
+        const DAY_START_HOUR = 5; // Tag beginnt um 5:00
 
         const COLORS = {
             green: '#22c55e',
@@ -299,34 +462,57 @@
             brown: '#92400e'
         };
 
-        const COLOR_NAMES = {
-            green: 'Grün',
-            red: 'Rot',
-            yellow: 'Gelb',
-            brown: 'Braun'
+        const LABELS = {
+            green: 'Frei',
+            red: 'Besetzt',
+            yellow: 'Vorne',
+            brown: 'Hinten',
+            zapupa: 'Zapupa'
         };
 
         let data = JSON.parse(localStorage.getItem('tracker-data') || '[]');
-        let lastTaps = {}; // Für Cooldown-Tracking
-        let tapTimers = {}; // Für Doppeltipp-Erkennung
-        let currentView = 'week';
+        let lastTaps = {};
+        let tapCounts = {};
+        let tapTimers = {};
+        let currentTab = 'freibesetzt';
+        let currentSubTab = 'week';
+        let heatmapMonth = new Date();
 
-        // Button-Event-Listener
+        // Vibration
+        function vibrate(pattern = 10) {
+            if ('vibrate' in navigator) {
+                navigator.vibrate(pattern);
+            }
+        }
+
+        // Adjust date for 5am day start
+        function getAdjustedDate(timestamp) {
+            const d = new Date(timestamp);
+            d.setHours(d.getHours() - DAY_START_HOUR);
+            return d;
+        }
+
+        function getAdjustedDateKey(timestamp) {
+            return getAdjustedDate(timestamp).toISOString().split('T')[0];
+        }
+
+        // Button events
         document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', (e) => handleTap(btn));
+            btn.addEventListener('click', () => handleTap(btn));
         });
 
-        // Tab-Wechsel
-        document.querySelectorAll('.tab').forEach(tab => {
+        // Main tab events
+        document.querySelectorAll('.main-tab').forEach(tab => {
             tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
-                currentView = tab.dataset.view;
+                currentTab = tab.dataset.tab;
+                currentSubTab = currentTab === 'vornehinten' ? 'days' : 'week';
                 renderChart();
             });
         });
 
-        // Daten löschen
+        // Clear data
         document.getElementById('clear-btn').addEventListener('click', () => {
             if (confirm('Wirklich alle Daten löschen?')) {
                 data = [];
@@ -339,29 +525,58 @@
             const buttonId = btn.dataset.button;
             const now = Date.now();
 
-            // Cooldown-Check
+            // Cooldown check
             if (lastTaps[buttonId] && (now - lastTaps[buttonId]) < COOLDOWN_MS) {
-                return; // Ignorieren
-            }
-
-            // Button 3 hat keinen Doppeltipp
-            if (buttonId === '3') {
-                recordEntry(buttonId, 'single');
                 return;
             }
 
-            // Doppeltipp-Logik für Button 1 und 2
-            if (tapTimers[buttonId]) {
-                // Zweiter Tap innerhalb der Zeit = Doppeltipp
-                clearTimeout(tapTimers[buttonId]);
-                tapTimers[buttonId] = null;
-                recordEntry(buttonId, 'double');
+            vibrate(10);
+
+            // Count taps
+            if (!tapCounts[buttonId]) tapCounts[buttonId] = { count: 0, firstTap: now };
+
+            if (now - tapCounts[buttonId].firstTap > TRIPLE_TAP_MS) {
+                tapCounts[buttonId] = { count: 1, firstTap: now };
             } else {
-                // Erster Tap - warte auf möglichen zweiten
-                tapTimers[buttonId] = setTimeout(() => {
-                    tapTimers[buttonId] = null;
+                tapCounts[buttonId].count++;
+            }
+
+            // Clear existing timer
+            if (tapTimers[buttonId]) {
+                clearTimeout(tapTimers[buttonId]);
+            }
+
+            // Wait for more taps
+            tapTimers[buttonId] = setTimeout(() => {
+                const count = tapCounts[buttonId].count;
+                tapCounts[buttonId] = { count: 0, firstTap: 0 };
+
+                if (count >= 3) {
+                    // Triple tap = delete last entry for this button
+                    deleteLastEntry(buttonId);
+                    flashButton(btn, 'delete');
+                    vibrate([20, 50, 20]);
+                } else if (count === 2 && buttonId !== '3') {
+                    // Double tap
+                    recordEntry(buttonId, 'double');
+                } else if (count >= 1) {
+                    // Single tap
                     recordEntry(buttonId, 'single');
-                }, DOUBLE_TAP_MS);
+                }
+            }, DOUBLE_TAP_MS);
+        }
+
+        function deleteLastEntry(buttonId) {
+            const now = Date.now();
+            for (let i = data.length - 1; i >= 0; i--) {
+                if (data[i].button === buttonId) {
+                    data.splice(i, 1);
+                    lastTaps[buttonId] = now;
+                    saveData();
+                    render();
+                    updateCooldowns();
+                    return;
+                }
             }
         }
 
@@ -377,7 +592,6 @@
                 color = 'green';
             }
 
-            // Eintrag speichern
             data.push({
                 timestamp: now,
                 button: buttonId,
@@ -387,13 +601,16 @@
             lastTaps[buttonId] = now;
             saveData();
 
-            // Visuelles Feedback
             const btn = document.getElementById('btn' + buttonId);
-            btn.classList.add('flash-' + color);
-            setTimeout(() => btn.classList.remove('flash-' + color), 300);
+            flashButton(btn, color);
 
             render();
             updateCooldowns();
+        }
+
+        function flashButton(btn, color) {
+            btn.classList.add('flash-' + color);
+            setTimeout(() => btn.classList.remove('flash-' + color), 300);
         }
 
         function saveData() {
@@ -406,74 +623,437 @@
         }
 
         function renderChart() {
-            const chart = document.getElementById('chart');
-            const now = new Date();
-            let days;
+            const area = document.getElementById('chart-area');
 
-            if (currentView === 'week') {
-                days = 7;
-            } else if (currentView === 'month') {
-                days = 30;
+            if (currentTab === 'freibesetzt') {
+                area.innerHTML = renderPieChartSection();
+            } else if (currentTab === 'vornehinten') {
+                area.innerHTML = renderBarChartSection();
             } else {
-                // Alle Daten - finde den ersten Eintrag
-                if (data.length === 0) {
-                    days = 7;
-                } else {
-                    const firstEntry = new Date(data[0].timestamp);
-                    days = Math.ceil((now - firstEntry) / (1000 * 60 * 60 * 24)) + 1;
-                    days = Math.max(days, 7);
-                }
+                area.innerHTML = renderZapupaSection();
             }
 
-            // Gruppiere nach Tagen
-            const dayData = {};
-            for (let i = 0; i < days; i++) {
-                const date = new Date(now);
-                date.setDate(date.getDate() - (days - 1 - i));
-                const key = date.toISOString().split('T')[0];
-                dayData[key] = { green: 0, red: 0, yellow: 0, brown: 0 };
+            // Attach sub-tab events
+            area.querySelectorAll('.sub-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    area.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    currentSubTab = tab.dataset.sub;
+                    renderChart();
+                });
+            });
+
+            // Heatmap navigation
+            area.querySelectorAll('.heatmap-nav button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const dir = btn.dataset.dir;
+                    heatmapMonth.setMonth(heatmapMonth.getMonth() + (dir === 'prev' ? -1 : 1));
+                    renderChart();
+                });
+            });
+        }
+
+        function renderPieChartSection() {
+            const filtered = filterByTime(data.filter(d => d.button === '1'));
+            const green = filtered.filter(d => d.color === 'green').length;
+            const red = filtered.filter(d => d.color === 'red').length;
+            const total = green + red;
+
+            return `
+                <div class="sub-tabs">
+                    <button class="sub-tab ${currentSubTab === 'week' ? 'active' : ''}" data-sub="week">Woche</button>
+                    <button class="sub-tab ${currentSubTab === 'month' ? 'active' : ''}" data-sub="month">Monat</button>
+                    <button class="sub-tab ${currentSubTab === 'all' ? 'active' : ''}" data-sub="all">Gesamt</button>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Frei / Besetzt</div>
+                    ${renderPieChart(green, red, total)}
+                </div>
+            `;
+        }
+
+        function renderPieChart(green, red, total) {
+            if (total === 0) {
+                return '<div class="no-data">Keine Daten</div>';
             }
 
-            data.forEach(entry => {
-                const key = new Date(entry.timestamp).toISOString().split('T')[0];
-                if (dayData[key]) {
-                    dayData[key][entry.color]++;
-                }
-            });
+            const greenPct = Math.round((green / total) * 100);
+            const redPct = 100 - greenPct;
+            const greenAngle = (green / total) * 360;
 
-            // Max-Wert für Skalierung
-            let maxCount = 1;
-            Object.values(dayData).forEach(day => {
-                const total = day.green + day.red + day.yellow + day.brown;
-                if (total > maxCount) maxCount = total;
-            });
+            // SVG pie
+            const r = 70;
+            const cx = 90;
+            const cy = 90;
 
-            // Chart rendern
-            const keys = Object.keys(dayData).sort();
-            chart.innerHTML = keys.map(key => {
-                const day = dayData[key];
-                const date = new Date(key);
-                const label = date.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric' });
+            function polarToCartesian(angle) {
+                const rad = (angle - 90) * Math.PI / 180;
+                return {
+                    x: cx + r * Math.cos(rad),
+                    y: cy + r * Math.sin(rad)
+                };
+            }
 
-                let bars = '';
-                ['green', 'red', 'yellow', 'brown'].forEach(color => {
-                    if (day[color] > 0) {
-                        const height = (day[color] / maxCount) * 150;
-                        bars += `<div class="bar" style="background:${COLORS[color]};height:${height}px"></div>`;
-                    }
+            function describeArc(startAngle, endAngle) {
+                const start = polarToCartesian(endAngle);
+                const end = polarToCartesian(startAngle);
+                const largeArc = endAngle - startAngle <= 180 ? 0 : 1;
+                return `M ${cx} ${cy} L ${start.x} ${start.y} A ${r} ${r} 0 ${largeArc} 0 ${end.x} ${end.y} Z`;
+            }
+
+            let paths = '';
+            if (green > 0 && red > 0) {
+                paths = `
+                    <path d="${describeArc(0, greenAngle)}" fill="${COLORS.green}"/>
+                    <path d="${describeArc(greenAngle, 360)}" fill="${COLORS.red}"/>
+                `;
+            } else if (green > 0) {
+                paths = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${COLORS.green}"/>`;
+            } else {
+                paths = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${COLORS.red}"/>`;
+            }
+
+            return `
+                <div class="pie-container">
+                    <div class="pie-wrapper">
+                        <svg class="pie-svg" viewBox="0 0 180 180">${paths}</svg>
+                        <div class="pie-center">
+                            <div class="pie-percent">${greenPct}%</div>
+                            <div class="pie-label">Frei</div>
+                        </div>
+                    </div>
+                    <div class="pie-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:${COLORS.green}"></span>
+                            Frei: ${green}
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:${COLORS.red}"></span>
+                            Besetzt: ${red}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderBarChartSection() {
+            return `
+                <div class="sub-tabs">
+                    <button class="sub-tab ${currentSubTab === 'days' ? 'active' : ''}" data-sub="days">Tage</button>
+                    <button class="sub-tab ${currentSubTab === 'weeks' ? 'active' : ''}" data-sub="weeks">Wochen</button>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Vorne / Hinten</div>
+                    ${renderBarChart()}
+                </div>
+            `;
+        }
+
+        function renderBarChart() {
+            const filtered = data.filter(d => d.button === '2');
+
+            if (filtered.length === 0) {
+                return '<div class="no-data">Keine Daten</div>';
+            }
+
+            if (currentSubTab === 'days') {
+                // Group by weekday
+                const days = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+                const dayData = Array(7).fill(null).map(() => ({ yellow: 0, brown: 0 }));
+
+                filtered.forEach(entry => {
+                    const d = getAdjustedDate(entry.timestamp);
+                    const day = d.getDay();
+                    dayData[day][entry.color]++;
                 });
 
-                if (!bars) {
-                    bars = '<div class="bar" style="background:#3d3d5c;height:5px"></div>';
-                }
+                // Reorder to start with Monday
+                const reordered = [...dayData.slice(1), dayData[0]];
+                const labels = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
 
-                return `
+                return renderBarChartHTML(reordered, labels);
+            } else {
+                // Group by week
+                const weekData = {};
+                filtered.forEach(entry => {
+                    const d = getAdjustedDate(entry.timestamp);
+                    const week = getWeekNumber(d);
+                    const key = `${d.getFullYear()}-${week}`;
+                    if (!weekData[key]) weekData[key] = { yellow: 0, brown: 0, week };
+                    weekData[key][entry.color]++;
+                });
+
+                const weeks = Object.entries(weekData)
+                    .sort((a, b) => a[0].localeCompare(b[0]))
+                    .slice(-8);
+
+                const values = weeks.map(w => w[1]);
+                const labels = weeks.map(w => `KW${w[1].week}`);
+
+                return renderBarChartHTML(values, labels);
+            }
+        }
+
+        function renderBarChartHTML(values, labels) {
+            const max = Math.max(...values.map(v => Math.max(v.yellow, v.brown)), 1);
+
+            let bars = '';
+            values.forEach((v, i) => {
+                const yH = (v.yellow / max) * 130;
+                const bH = (v.brown / max) * 130;
+                bars += `
                     <div class="bar-group">
-                        ${bars}
-                        <div class="bar-label">${label}</div>
+                        <div class="bar-pair">
+                            <div class="bar" style="background:${COLORS.yellow};height:${yH}px"></div>
+                            <div class="bar" style="background:${COLORS.brown};height:${bH}px"></div>
+                        </div>
+                        <div class="bar-label">${labels[i]}</div>
                     </div>
                 `;
-            }).join('');
+            });
+
+            return `
+                <div class="bar-chart">${bars}</div>
+                <div class="pie-legend" style="margin-top:15px">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background:${COLORS.yellow}"></span>
+                        Vorne
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background:${COLORS.brown}"></span>
+                        Hinten
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderZapupaSection() {
+            return `
+                <div class="sub-tabs">
+                    <button class="sub-tab ${currentSubTab === 'heatmap' || currentSubTab === 'week' ? 'active' : ''}" data-sub="heatmap">Heatmap</button>
+                    <button class="sub-tab ${currentSubTab === 'pie' ? 'active' : ''}" data-sub="pie">Statistik</button>
+                </div>
+                <div class="chart-container">
+                    ${currentSubTab === 'pie' ? renderZapupaPie() : renderHeatmap()}
+                </div>
+            `;
+        }
+
+        function renderHeatmap() {
+            const year = heatmapMonth.getFullYear();
+            const month = heatmapMonth.getMonth();
+            const monthName = heatmapMonth.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
+
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const today = new Date();
+
+            // Count entries per day
+            const zapupaData = data.filter(d => d.button === '3');
+            const dayCounts = {};
+            zapupaData.forEach(entry => {
+                const key = getAdjustedDateKey(entry.timestamp);
+                dayCounts[key] = (dayCounts[key] || 0) + 1;
+            });
+
+            // Build calendar grid
+            const headers = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+            let grid = headers.map(h => `<div class="heatmap-header">${h}</div>`).join('');
+
+            // Empty cells before first day (Monday = 0)
+            let startDay = firstDay.getDay() - 1;
+            if (startDay < 0) startDay = 6;
+            for (let i = 0; i < startDay; i++) {
+                grid += '<div class="heatmap-day empty"></div>';
+            }
+
+            // Days of month
+            for (let d = 1; d <= lastDay.getDate(); d++) {
+                const date = new Date(year, month, d);
+                const key = date.toISOString().split('T')[0];
+                const count = dayCounts[key] || 0;
+
+                let cls = 'zero';
+                if (date > today) {
+                    cls = 'future';
+                } else if (count >= 2) {
+                    cls = 'two';
+                } else if (count === 1) {
+                    cls = 'one';
+                }
+
+                grid += `<div class="heatmap-day ${cls}">${d}</div>`;
+            }
+
+            return `
+                <div class="heatmap-container">
+                    <div class="heatmap-nav">
+                        <button data-dir="prev">&larr;</button>
+                        <span class="heatmap-month">${monthName}</span>
+                        <button data-dir="next">&rarr;</button>
+                    </div>
+                    <div class="heatmap-grid">${grid}</div>
+                    <div class="heatmap-legend">
+                        <div class="heatmap-legend-item">
+                            <span class="heatmap-legend-box" style="background:#fecaca"></span> 0x
+                        </div>
+                        <div class="heatmap-legend-item">
+                            <span class="heatmap-legend-box" style="background:#bbf7d0"></span> 1x
+                        </div>
+                        <div class="heatmap-legend-item">
+                            <span class="heatmap-legend-box" style="background:#22c55e"></span> 2x+
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderZapupaPie() {
+            const zapupaData = data.filter(d => d.button === '3');
+
+            // Count per day
+            const dayCounts = {};
+            zapupaData.forEach(entry => {
+                const key = getAdjustedDateKey(entry.timestamp);
+                dayCounts[key] = (dayCounts[key] || 0) + 1;
+            });
+
+            // Get days in range
+            const now = new Date();
+            let startDate;
+            if (currentSubTab === 'pie-week' || currentSubTab === 'pie') {
+                startDate = new Date(now);
+                startDate.setDate(startDate.getDate() - 7);
+            } else if (currentSubTab === 'pie-month') {
+                startDate = new Date(now);
+                startDate.setDate(startDate.getDate() - 30);
+            } else {
+                // All time - find first entry
+                if (zapupaData.length > 0) {
+                    startDate = getAdjustedDate(zapupaData[0].timestamp);
+                } else {
+                    startDate = new Date(now);
+                    startDate.setDate(startDate.getDate() - 7);
+                }
+            }
+
+            let zero = 0, one = 0, two = 0;
+            const d = new Date(startDate);
+            while (d <= now) {
+                const key = d.toISOString().split('T')[0];
+                const count = dayCounts[key] || 0;
+                if (count === 0) zero++;
+                else if (count === 1) one++;
+                else two++;
+                d.setDate(d.getDate() + 1);
+            }
+
+            const total = zero + one + two;
+            if (total === 0) {
+                return '<div class="no-data">Keine Daten</div>';
+            }
+
+            // Simple text stats
+            return `
+                <div class="chart-title">Zapupa Statistik</div>
+                <div class="sub-tabs" style="margin-bottom:15px">
+                    <button class="sub-tab ${currentSubTab === 'pie' || currentSubTab === 'pie-week' ? 'active' : ''}" data-sub="pie-week">Woche</button>
+                    <button class="sub-tab ${currentSubTab === 'pie-month' ? 'active' : ''}" data-sub="pie-month">Monat</button>
+                    <button class="sub-tab ${currentSubTab === 'pie-all' ? 'active' : ''}" data-sub="pie-all">Gesamt</button>
+                </div>
+                ${renderZapupaPieChart(zero, one, two, total)}
+            `;
+        }
+
+        function renderZapupaPieChart(zero, one, two, total) {
+            const zeroPct = Math.round((zero / total) * 100);
+            const onePct = Math.round((one / total) * 100);
+            const twoPct = 100 - zeroPct - onePct;
+
+            // Calculate angles
+            const zeroAngle = (zero / total) * 360;
+            const oneAngle = (one / total) * 360;
+            const twoAngle = (two / total) * 360;
+
+            const r = 70;
+            const cx = 90;
+            const cy = 90;
+
+            function polarToCartesian(angle) {
+                const rad = (angle - 90) * Math.PI / 180;
+                return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+            }
+
+            function describeArc(startAngle, endAngle) {
+                if (endAngle - startAngle >= 360) {
+                    return `M ${cx} ${cy-r} A ${r} ${r} 0 1 1 ${cx-0.01} ${cy-r} A ${r} ${r} 0 1 1 ${cx} ${cy-r} Z`;
+                }
+                const start = polarToCartesian(endAngle);
+                const end = polarToCartesian(startAngle);
+                const largeArc = endAngle - startAngle <= 180 ? 0 : 1;
+                return `M ${cx} ${cy} L ${start.x} ${start.y} A ${r} ${r} 0 ${largeArc} 0 ${end.x} ${end.y} Z`;
+            }
+
+            let paths = '';
+            let angle = 0;
+            if (zero > 0) {
+                paths += `<path d="${describeArc(angle, angle + zeroAngle)}" fill="#fecaca"/>`;
+                angle += zeroAngle;
+            }
+            if (one > 0) {
+                paths += `<path d="${describeArc(angle, angle + oneAngle)}" fill="#bbf7d0"/>`;
+                angle += oneAngle;
+            }
+            if (two > 0) {
+                paths += `<path d="${describeArc(angle, angle + twoAngle)}" fill="#22c55e"/>`;
+            }
+
+            return `
+                <div class="pie-container">
+                    <div class="pie-wrapper">
+                        <svg class="pie-svg" viewBox="0 0 180 180">${paths}</svg>
+                        <div class="pie-center">
+                            <div class="pie-percent">${total}</div>
+                            <div class="pie-label">Tage</div>
+                        </div>
+                    </div>
+                    <div class="pie-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#fecaca"></span>
+                            0x: ${zero} (${zeroPct}%)
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#bbf7d0"></span>
+                            1x: ${one} (${onePct}%)
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#22c55e"></span>
+                            2x+: ${two} (${twoPct}%)
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterByTime(entries) {
+            const now = Date.now();
+            let cutoff = 0;
+
+            if (currentSubTab === 'week') {
+                cutoff = now - 7 * 24 * 60 * 60 * 1000;
+            } else if (currentSubTab === 'month') {
+                cutoff = now - 30 * 24 * 60 * 60 * 1000;
+            }
+
+            return entries.filter(e => e.timestamp >= cutoff);
+        }
+
+        function getWeekNumber(d) {
+            const date = new Date(d);
+            date.setHours(0, 0, 0, 0);
+            date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+            const week1 = new Date(date.getFullYear(), 0, 4);
+            return 1 + Math.round(((date - week1) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
         }
 
         function renderHistory() {
@@ -484,8 +1064,7 @@
                 return;
             }
 
-            // Letzte 20 Einträge, neueste zuerst
-            const recent = [...data].reverse().slice(0, 20);
+            const recent = [...data].reverse().slice(0, 15);
 
             list.innerHTML = recent.map(entry => {
                 const date = new Date(entry.timestamp);
@@ -496,10 +1075,23 @@
                     minute: '2-digit'
                 });
 
+                let label;
+                if (entry.button === '3') {
+                    label = 'Zapupa';
+                } else if (entry.color === 'green') {
+                    label = 'Frei';
+                } else if (entry.color === 'red') {
+                    label = 'Besetzt';
+                } else if (entry.color === 'yellow') {
+                    label = 'Vorne';
+                } else {
+                    label = 'Hinten';
+                }
+
                 return `
                     <div class="history-item">
                         <div class="history-dot" style="background:${COLORS[entry.color]}"></div>
-                        <div class="history-text">Button ${entry.button} - ${COLOR_NAMES[entry.color]}</div>
+                        <div class="history-text">${label}</div>
                         <div class="history-time">${time}</div>
                     </div>
                 `;
@@ -525,17 +1117,11 @@
             });
         }
 
-        // Cooldown-Timer alle Sekunde aktualisieren
         setInterval(updateCooldowns, 1000);
-
-        // Initial rendern
         render();
 
-        // Service Worker registrieren für Offline-Fähigkeit
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').catch(() => {
-                // Service Worker nicht verfügbar - kein Problem
-            });
+            navigator.serviceWorker.register('sw.js').catch(() => {});
         }
     </script>
 </body>
