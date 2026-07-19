@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <title>Tracker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            padding: 20px;
+            padding-top: env(safe-area-inset-top, 20px);
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 16px;
+            background: #2d2d44;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.1s, background 0.3s;
+            position: relative;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .btn .hint {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            margin-top: 5px;
+            font-weight: 400;
+        }
+
+        .btn .cooldown {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Flash-Farben beim Tippen */
+        .btn.flash-green { background: #22c55e; }
+        .btn.flash-red { background: #ef4444; }
+        .btn.flash-yellow { background: #eab308; }
+        .btn.flash-brown { background: #92400e; }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px;
+            background: #2d2d44;
+            border: none;
+            border-radius: 10px;
+            color: #888;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background: #3d3d5c;
+            color: #fff;
+        }
+
+        .chart-container {
+            background: #2d2d44;
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .chart {
+            height: 200px;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        .chart-inner {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            gap: 3px;
+            min-width: 100%;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            min-width: 40px;
+        }
+
+        .bar {
+            width: 100%;
+            max-width: 30px;
+            border-radius: 4px 4px 0 0;
+            transition: height 0.3s;
+        }
+
+        .bar-label {
+            font-size: 0.65rem;
+            color: #888;
+            margin-top: 5px;
+            white-space: nowrap;
+        }
+
+        .history {
+            background: #2d2d44;
+            border-radius: 16px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .history-title {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .history-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #3d3d5c;
+            gap: 10px;
+        }
+
+        .history-item:last-child {
+            border-bottom: none;
+        }
+
+        .history-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .history-text {
+            flex: 1;
+            font-size: 0.9rem;
+        }
+
+        .history-time {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .no-data {
+            text-align: center;
+            color: #666;
+            padding: 30px;
+        }
+
+        .clear-btn {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: #3d3d5c;
+            border: none;
+            border-radius: 10px;
+            color: #888;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tracker</h1>
+
+        <div class="buttons">
+            <button class="btn" id="btn1" data-button="1">
+                Button 1
+                <div class="hint">1x Tap = Grün | 2x Tap = Rot</div>
+                <span class="cooldown"></span>
+            </button>
+            <button class="btn" id="btn2" data-button="2">
+                Button 2
+                <div class="hint">1x Tap = Gelb | 2x Tap = Braun</div>
+                <span class="cooldown"></span>
+            </button>
+            <button class="btn" id="btn3" data-button="3">
+                Button 3
+                <div class="hint">1x Tap = Grün</div>
+                <span class="cooldown"></span>
+            </button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-view="week">7 Tage</button>
+            <button class="tab" data-view="month">30 Tage</button>
+            <button class="tab" data-view="all">Alles</button>
+        </div>
+
+        <div class="chart-container">
+            <div class="legend">
+                <div class="legend-item"><span class="legend-dot" style="background:#22c55e"></span> Grün</div>
+                <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span> Rot</div>
+                <div class="legend-item"><span class="legend-dot" style="background:#eab308"></span> Gelb</div>
+                <div class="legend-item"><span class="legend-dot" style="background:#92400e"></span> Braun</div>
+            </div>
+            <div class="chart">
+                <div class="chart-inner" id="chart"></div>
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="history-title">Letzte Einträge</div>
+            <div id="history-list"></div>
+        </div>
+
+        <button class="clear-btn" id="clear-btn">Alle Daten löschen</button>
+    </div>
+
+    <script>
+        const COOLDOWN_MS = 60 * 1000; // 1 Minute
+        const DOUBLE_TAP_MS = 300;
+
+        const COLORS = {
+            green: '#22c55e',
+            red: '#ef4444',
+            yellow: '#eab308',
+            brown: '#92400e'
+        };
+
+        const COLOR_NAMES = {
+            green: 'Grün',
+            red: 'Rot',
+            yellow: 'Gelb',
+            brown: 'Braun'
+        };
+
+        let data = JSON.parse(localStorage.getItem('tracker-data') || '[]');
+        let lastTaps = {}; // Für Cooldown-Tracking
+        let tapTimers = {}; // Für Doppeltipp-Erkennung
+        let currentView = 'week';
+
+        // Button-Event-Listener
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', (e) => handleTap(btn));
+        });
+
+        // Tab-Wechsel
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentView = tab.dataset.view;
+                renderChart();
+            });
+        });
+
+        // Daten löschen
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            if (confirm('Wirklich alle Daten löschen?')) {
+                data = [];
+                saveData();
+                render();
+            }
+        });
+
+        function handleTap(btn) {
+            const buttonId = btn.dataset.button;
+            const now = Date.now();
+
+            // Cooldown-Check
+            if (lastTaps[buttonId] && (now - lastTaps[buttonId]) < COOLDOWN_MS) {
+                return; // Ignorieren
+            }
+
+            // Button 3 hat keinen Doppeltipp
+            if (buttonId === '3') {
+                recordEntry(buttonId, 'single');
+                return;
+            }
+
+            // Doppeltipp-Logik für Button 1 und 2
+            if (tapTimers[buttonId]) {
+                // Zweiter Tap innerhalb der Zeit = Doppeltipp
+                clearTimeout(tapTimers[buttonId]);
+                tapTimers[buttonId] = null;
+                recordEntry(buttonId, 'double');
+            } else {
+                // Erster Tap - warte auf möglichen zweiten
+                tapTimers[buttonId] = setTimeout(() => {
+                    tapTimers[buttonId] = null;
+                    recordEntry(buttonId, 'single');
+                }, DOUBLE_TAP_MS);
+            }
+        }
+
+        function recordEntry(buttonId, tapType) {
+            const now = Date.now();
+            let color;
+
+            if (buttonId === '1') {
+                color = tapType === 'single' ? 'green' : 'red';
+            } else if (buttonId === '2') {
+                color = tapType === 'single' ? 'yellow' : 'brown';
+            } else {
+                color = 'green';
+            }
+
+            // Eintrag speichern
+            data.push({
+                timestamp: now,
+                button: buttonId,
+                color: color
+            });
+
+            lastTaps[buttonId] = now;
+            saveData();
+
+            // Visuelles Feedback
+            const btn = document.getElementById('btn' + buttonId);
+            btn.classList.add('flash-' + color);
+            setTimeout(() => btn.classList.remove('flash-' + color), 300);
+
+            render();
+            updateCooldowns();
+        }
+
+        function saveData() {
+            localStorage.setItem('tracker-data', JSON.stringify(data));
+        }
+
+        function render() {
+            renderChart();
+            renderHistory();
+        }
+
+        function renderChart() {
+            const chart = document.getElementById('chart');
+            const now = new Date();
+            let days;
+
+            if (currentView === 'week') {
+                days = 7;
+            } else if (currentView === 'month') {
+                days = 30;
+            } else {
+                // Alle Daten - finde den ersten Eintrag
+                if (data.length === 0) {
+                    days = 7;
+                } else {
+                    const firstEntry = new Date(data[0].timestamp);
+                    days = Math.ceil((now - firstEntry) / (1000 * 60 * 60 * 24)) + 1;
+                    days = Math.max(days, 7);
+                }
+            }
+
+            // Gruppiere nach Tagen
+            const dayData = {};
+            for (let i = 0; i < days; i++) {
+                const date = new Date(now);
+                date.setDate(date.getDate() - (days - 1 - i));
+                const key = date.toISOString().split('T')[0];
+                dayData[key] = { green: 0, red: 0, yellow: 0, brown: 0 };
+            }
+
+            data.forEach(entry => {
+                const key = new Date(entry.timestamp).toISOString().split('T')[0];
+                if (dayData[key]) {
+                    dayData[key][entry.color]++;
+                }
+            });
+
+            // Max-Wert für Skalierung
+            let maxCount = 1;
+            Object.values(dayData).forEach(day => {
+                const total = day.green + day.red + day.yellow + day.brown;
+                if (total > maxCount) maxCount = total;
+            });
+
+            // Chart rendern
+            const keys = Object.keys(dayData).sort();
+            chart.innerHTML = keys.map(key => {
+                const day = dayData[key];
+                const date = new Date(key);
+                const label = date.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric' });
+
+                let bars = '';
+                ['green', 'red', 'yellow', 'brown'].forEach(color => {
+                    if (day[color] > 0) {
+                        const height = (day[color] / maxCount) * 150;
+                        bars += `<div class="bar" style="background:${COLORS[color]};height:${height}px"></div>`;
+                    }
+                });
+
+                if (!bars) {
+                    bars = '<div class="bar" style="background:#3d3d5c;height:5px"></div>';
+                }
+
+                return `
+                    <div class="bar-group">
+                        ${bars}
+                        <div class="bar-label">${label}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderHistory() {
+            const list = document.getElementById('history-list');
+
+            if (data.length === 0) {
+                list.innerHTML = '<div class="no-data">Noch keine Einträge</div>';
+                return;
+            }
+
+            // Letzte 20 Einträge, neueste zuerst
+            const recent = [...data].reverse().slice(0, 20);
+
+            list.innerHTML = recent.map(entry => {
+                const date = new Date(entry.timestamp);
+                const time = date.toLocaleString('de-DE', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+
+                return `
+                    <div class="history-item">
+                        <div class="history-dot" style="background:${COLORS[entry.color]}"></div>
+                        <div class="history-text">Button ${entry.button} - ${COLOR_NAMES[entry.color]}</div>
+                        <div class="history-time">${time}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateCooldowns() {
+            const now = Date.now();
+
+            document.querySelectorAll('.btn').forEach(btn => {
+                const buttonId = btn.dataset.button;
+                const lastTap = lastTaps[buttonId];
+                const cooldownEl = btn.querySelector('.cooldown');
+
+                if (lastTap && (now - lastTap) < COOLDOWN_MS) {
+                    const remaining = Math.ceil((COOLDOWN_MS - (now - lastTap)) / 1000);
+                    cooldownEl.textContent = `${remaining}s`;
+                    btn.classList.add('disabled');
+                } else {
+                    cooldownEl.textContent = '';
+                    btn.classList.remove('disabled');
+                }
+            });
+        }
+
+        // Cooldown-Timer alle Sekunde aktualisieren
+        setInterval(updateCooldowns, 1000);
+
+        // Initial rendern
+        render();
+
+        // Service Worker registrieren für Offline-Fähigkeit
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {
+                // Service Worker nicht verfügbar - kein Problem
+            });
+        }
+    </script>
+</body>
+</html>
