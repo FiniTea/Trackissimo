@@ -1,12 +1,17 @@
 {
   "version": 1,
   "user": "fin",
-  "exportedAt": "2026-07-19T16:42:39.745Z",
+  "exportedAt": "2026-07-19T17:55:56.953Z",
   "entries": [
     {
       "timestamp": 1784479337140,
       "button": "1",
       "color": "green"
+    },
+    {
+      "timestamp": 1784479599761,
+      "button": "2",
+      "color": "yellow"
     }
   ]
 }
