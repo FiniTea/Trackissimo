@@ -2,9 +2,14 @@
   "buttons" : [
 
   ],
-  "exportedAt" : "2026-08-11T21:48:35Z",
+  "exportedAt" : "2026-08-11T21:49:42Z",
   "groups" : [
-
+    {
+      "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "name" : "Badezimmer",
+      "showsPieChart" : true,
+      "sortOrder" : 0
+    }
   ],
   "logEntries" : [
 
@@ -12,14 +17,14 @@
   "schemaVersion" : 1,
   "wellbeingEntries" : [
     {
-      "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:41:47Z"
-    },
-    {
       "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
       "score" : 2,
       "timestamp" : "2026-08-11T21:40:06Z"
+    },
+    {
+      "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:41:47Z"
     },
     {
       "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
