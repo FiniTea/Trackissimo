@@ -1,8 +1,28 @@
 {
   "buttons" : [
-
+    {
+      "colorHex" : "#00DAC3",
+      "groupId" : "ECDE6072-9EF4-4D8C-9CB2-221306ACD46B",
+      "groupName" : "Badezimmer",
+      "heatmapMaxFrequency" : 2,
+      "id" : "A8E23487-D989-45CD-A0D5-B2835227EA0D",
+      "loggingMode" : "instant",
+      "name" : "Zapupa",
+      "statKind" : "heatmap",
+      "symbolName" : "fork.knife"
+    },
+    {
+      "colorHex" : "#FFD600",
+      "groupId" : "ECDE6072-9EF4-4D8C-9CB2-221306ACD46B",
+      "groupName" : "Badezimmer",
+      "id" : "F6E6E981-E326-40B1-9134-8E02EAB30022",
+      "loggingMode" : "instant",
+      "name" : "Pinkeln",
+      "statKind" : "bar",
+      "symbolName" : "mug.fill"
+    }
   ],
-  "exportedAt" : "2026-08-11T21:29:51Z",
+  "exportedAt" : "2026-08-11T21:31:05Z",
   "groups" : [
     {
       "id" : "ECDE6072-9EF4-4D8C-9CB2-221306ACD46B",
