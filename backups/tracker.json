@@ -32,7 +32,7 @@
       "statKind" : "bar"
     }
   ],
-  "exportedAt" : "2026-08-11T22:12:00Z",
+  "exportedAt" : "2026-08-11T22:13:02Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -53,16 +53,6 @@
   "schemaVersion" : 1,
   "wellbeingEntries" : [
     {
-      "id" : "7162B01F-CC35-4C4B-82A0-515EEC1FC239",
-      "score" : 3,
-      "timestamp" : "2026-08-11T22:11:58Z"
-    },
-    {
-      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:48:33Z"
-    },
-    {
       "id" : "BBFBA735-5361-4470-8AD1-0A7CC72B08C2",
       "score" : 2,
       "timestamp" : "2026-08-11T21:54:26Z"
@@ -73,14 +63,24 @@
       "timestamp" : "2026-08-11T21:41:47Z"
     },
     {
+      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:42:33Z"
+    },
+    {
+      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:48:33Z"
+    },
+    {
       "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
       "score" : 2,
       "timestamp" : "2026-08-11T21:40:06Z"
     },
     {
-      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:42:33Z"
+      "id" : "7162B01F-CC35-4C4B-82A0-515EEC1FC239",
+      "score" : 3,
+      "timestamp" : "2026-08-11T22:11:58Z"
     }
   ]
 }
