@@ -28,11 +28,11 @@
       "icon" : "🪥",
       "id" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
       "loggingMode" : "instant",
-      "name" : "Zspupa",
+      "name" : "Zapupa",
       "statKind" : "heatmap"
     }
   ],
-  "exportedAt" : "2026-08-11T21:52:38Z",
+  "exportedAt" : "2026-08-11T21:53:44Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -42,7 +42,13 @@
     }
   ],
   "logEntries" : [
-
+    {
+      "buttonId" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
+      "buttonName" : "Zapupa",
+      "groupName" : "Badezimmer",
+      "id" : "1036E213-5C01-4983-B7C6-55BA9DB0ADE3",
+      "startDate" : "2026-08-11T21:53:13Z"
+    }
   ],
   "schemaVersion" : 1,
   "wellbeingEntries" : [
