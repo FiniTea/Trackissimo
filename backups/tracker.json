@@ -1,8 +1,17 @@
 {
   "buttons" : [
-
+    {
+      "colorHex" : "#B78A66",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "💩",
+      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
+      "loggingMode" : "instant",
+      "name" : "Kaka",
+      "statKind" : "bar"
+    }
   ],
-  "exportedAt" : "2026-08-11T21:49:42Z",
+  "exportedAt" : "2026-08-11T21:50:57Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -17,11 +26,6 @@
   "schemaVersion" : 1,
   "wellbeingEntries" : [
     {
-      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:40:06Z"
-    },
-    {
       "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
       "score" : 2,
       "timestamp" : "2026-08-11T21:41:47Z"
@@ -35,6 +39,11 @@
       "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
       "score" : 2,
       "timestamp" : "2026-08-11T21:48:33Z"
+    },
+    {
+      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:40:06Z"
     }
   ]
 }
