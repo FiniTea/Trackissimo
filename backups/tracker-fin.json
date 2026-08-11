@@ -1,7 +1,7 @@
 {
   "version": 1,
   "user": "fin",
-  "exportedAt": "2026-08-10T22:15:41.368Z",
+  "exportedAt": "2026-08-11T05:23:11.980Z",
   "entries": [
     {
       "timestamp": 1784479337140,
@@ -250,6 +250,21 @@
     },
     {
       "timestamp": 1786400139354,
+      "button": "3",
+      "color": "green"
+    },
+    {
+      "timestamp": 1786425788509,
+      "button": "1",
+      "color": "green"
+    },
+    {
+      "timestamp": 1786425789292,
+      "button": "2",
+      "color": "yellow"
+    },
+    {
+      "timestamp": 1786425789960,
       "button": "3",
       "color": "green"
     }
