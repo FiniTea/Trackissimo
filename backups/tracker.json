@@ -1,13 +1,43 @@
 {
   "buttons" : [
     {
-      "colorHex" : "#0091FF",
+      "colorHex" : "#FFD600",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "🚿",
-      "id" : "3EDEDDEB-96BC-4736-BC82-C3F1FF71C5EA",
+      "icon" : "🚽",
+      "id" : "7B33CFFC-15E7-4E4E-A887-4452180F5913",
       "loggingMode" : "instant",
-      "name" : "Dusche",
+      "name" : "Pinkeln",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "🛀",
+      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
+      "loggingMode" : "instant",
+      "name" : "Besetzt",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "🛁",
+      "id" : "8028DA0F-C292-40DB-BF02-94961067918A",
+      "loggingMode" : "instant",
+      "name" : "Frei",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#B78A66",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "💩",
+      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
+      "loggingMode" : "instant",
+      "name" : "Kaka",
       "statKind" : "bar"
     },
     {
@@ -22,47 +52,28 @@
       "statKind" : "heatmap"
     },
     {
-      "colorHex" : "#B78A66",
+      "colorHex" : "#0091FF",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "💩",
-      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
+      "icon" : "🚿",
+      "id" : "3EDEDDEB-96BC-4736-BC82-C3F1FF71C5EA",
       "loggingMode" : "instant",
-      "name" : "Kaka",
+      "name" : "Dusche",
       "statKind" : "bar"
     },
     {
-      "colorHex" : "#FFD600",
+      "colorHex" : "#FF8D28",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "🚽",
-      "id" : "7B33CFFC-15E7-4E4E-A887-4452180F5913",
+      "heatmapMaxFrequency" : 5,
+      "icon" : "👻",
+      "id" : "688CD841-9953-4039-8EDF-236A35B48CCB",
       "loggingMode" : "instant",
-      "name" : "Pinkeln",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "icon" : "🛁",
-      "id" : "8028DA0F-C292-40DB-BF02-94961067918A",
-      "loggingMode" : "instant",
-      "name" : "Frei",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "icon" : "🛀",
-      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
-      "loggingMode" : "instant",
-      "name" : "Besetzt",
-      "statKind" : "bar"
+      "name" : "Felix",
+      "statKind" : "heatmap"
     }
   ],
-  "exportedAt" : "2026-08-12T13:14:56Z",
+  "exportedAt" : "2026-08-12T13:16:26Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -162,6 +173,11 @@
       "id" : "85A88EDE-F8D5-4242-BC4C-58B5C32EA3A8",
       "score" : 2,
       "timestamp" : "2026-08-12T09:52:26Z"
+    },
+    {
+      "id" : "38446DEF-C752-4E51-B59A-89BC7BC8314B",
+      "score" : 2,
+      "timestamp" : "2026-08-12T13:15:02Z"
     }
   ]
 }
