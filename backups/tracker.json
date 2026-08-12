@@ -112,9 +112,20 @@
       "loggingMode" : "instant",
       "name" : "Sofie",
       "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "78F2C1E9-4F9E-4B96-B785-28A592AC135F",
+      "groupName" : "Anderes",
+      "heatmapMaxFrequency" : 1,
+      "icon" : "🇯🇲",
+      "id" : "2FE47FD0-FB57-44C2-84F7-CEADEEFAE759",
+      "loggingMode" : "instant",
+      "name" : "Kiffen",
+      "statKind" : "heatmap"
     }
   ],
-  "exportedAt" : "2026-08-12T18:53:33Z",
+  "exportedAt" : "2026-08-12T20:25:27Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -133,6 +144,12 @@
       "name" : "Menschen",
       "showsPieChart" : true,
       "sortOrder" : 2
+    },
+    {
+      "id" : "78F2C1E9-4F9E-4B96-B785-28A592AC135F",
+      "name" : "Anderes",
+      "showsPieChart" : false,
+      "sortOrder" : 3
     }
   ],
   "logEntries" : [
@@ -199,69 +216,26 @@
       "groupName" : "Badezimmer",
       "id" : "C10F3967-90D8-4525-A94F-FF2567DD0721",
       "startDate" : "2026-08-12T13:55:45Z"
+    },
+    {
+      "buttonId" : "2FE47FD0-FB57-44C2-84F7-CEADEEFAE759",
+      "buttonName" : "Kiffen",
+      "groupName" : "Anderes",
+      "id" : "172B6084-60B6-4151-9E3B-63A75C9BDA52",
+      "startDate" : "2026-08-12T19:22:46Z"
     }
   ],
   "schemaVersion" : 1,
   "wellbeingEntries" : [
     {
-      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
+      "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
       "score" : 2,
-      "timestamp" : "2026-08-11T21:48:33Z"
-    },
-    {
-      "id" : "85A88EDE-F8D5-4242-BC4C-58B5C32EA3A8",
-      "score" : 2,
-      "timestamp" : "2026-08-12T09:52:26Z"
-    },
-    {
-      "id" : "BBFBA735-5361-4470-8AD1-0A7CC72B08C2",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:54:26Z"
-    },
-    {
-      "id" : "4279DD7A-661F-422E-8814-DF169B990C02",
-      "score" : 3,
-      "timestamp" : "2026-08-12T13:57:12Z"
+      "timestamp" : "2026-08-11T21:41:47Z"
     },
     {
       "id" : "D5DB25B3-1C75-4C7E-A96F-3E94C9FC9798",
       "score" : 2,
       "timestamp" : "2026-08-11T22:59:15Z"
-    },
-    {
-      "id" : "38446DEF-C752-4E51-B59A-89BC7BC8314B",
-      "score" : 2,
-      "timestamp" : "2026-08-12T13:15:02Z"
-    },
-    {
-      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:40:06Z"
-    },
-    {
-      "id" : "BB3A2CEF-5AD1-413C-9347-5373D36EDCAD",
-      "score" : 2,
-      "timestamp" : "2026-08-12T09:17:32Z"
-    },
-    {
-      "id" : "8DD1E70A-BE55-482C-9762-AEFB1CBEBFA9",
-      "score" : 2,
-      "timestamp" : "2026-08-12T08:47:27Z"
-    },
-    {
-      "id" : "B919B179-8DC4-4ACD-90E1-5833EACFEC97",
-      "score" : 2,
-      "timestamp" : "2026-08-12T14:11:39Z"
-    },
-    {
-      "id" : "846126C7-B08E-46CC-8D7E-46A85408C40A",
-      "score" : 2,
-      "timestamp" : "2026-08-11T22:23:58Z"
-    },
-    {
-      "id" : "A88D1860-6598-4207-B3AA-F70E5AAA3D0B",
-      "score" : 3,
-      "timestamp" : "2026-08-12T13:44:45Z"
     },
     {
       "id" : "F7CF5715-8D53-4F03-98C6-4F242501A828",
@@ -274,6 +248,41 @@
       "timestamp" : "2026-08-11T23:22:15Z"
     },
     {
+      "id" : "3B6BFB79-D798-4E31-8971-F7ACA01A6CCF",
+      "score" : 4,
+      "timestamp" : "2026-08-12T20:25:25Z"
+    },
+    {
+      "id" : "BB3A2CEF-5AD1-413C-9347-5373D36EDCAD",
+      "score" : 2,
+      "timestamp" : "2026-08-12T09:17:32Z"
+    },
+    {
+      "id" : "FAFE97C7-4CBC-43A4-8E6D-64DBB927844F",
+      "score" : 5,
+      "timestamp" : "2026-08-12T19:22:42Z"
+    },
+    {
+      "id" : "8DD1E70A-BE55-482C-9762-AEFB1CBEBFA9",
+      "score" : 2,
+      "timestamp" : "2026-08-12T08:47:27Z"
+    },
+    {
+      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:42:33Z"
+    },
+    {
+      "id" : "BBFBA735-5361-4470-8AD1-0A7CC72B08C2",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:54:26Z"
+    },
+    {
+      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:40:06Z"
+    },
+    {
       "id" : "7162B01F-CC35-4C4B-82A0-515EEC1FC239",
       "score" : 3,
       "timestamp" : "2026-08-11T22:11:58Z"
@@ -284,19 +293,44 @@
       "timestamp" : "2026-08-12T18:26:04Z"
     },
     {
+      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:48:33Z"
+    },
+    {
+      "id" : "4279DD7A-661F-422E-8814-DF169B990C02",
+      "score" : 3,
+      "timestamp" : "2026-08-12T13:57:12Z"
+    },
+    {
+      "id" : "85A88EDE-F8D5-4242-BC4C-58B5C32EA3A8",
+      "score" : 2,
+      "timestamp" : "2026-08-12T09:52:26Z"
+    },
+    {
       "id" : "62754B26-5353-4532-BB2D-8ED4C619D13B",
       "score" : 5,
       "timestamp" : "2026-08-12T18:53:31Z"
     },
     {
-      "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
+      "id" : "846126C7-B08E-46CC-8D7E-46A85408C40A",
       "score" : 2,
-      "timestamp" : "2026-08-11T21:41:47Z"
+      "timestamp" : "2026-08-11T22:23:58Z"
     },
     {
-      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
+      "id" : "38446DEF-C752-4E51-B59A-89BC7BC8314B",
       "score" : 2,
-      "timestamp" : "2026-08-11T21:42:33Z"
+      "timestamp" : "2026-08-12T13:15:02Z"
+    },
+    {
+      "id" : "A88D1860-6598-4207-B3AA-F70E5AAA3D0B",
+      "score" : 3,
+      "timestamp" : "2026-08-12T13:44:45Z"
+    },
+    {
+      "id" : "B919B179-8DC4-4ACD-90E1-5833EACFEC97",
+      "score" : 2,
+      "timestamp" : "2026-08-12T14:11:39Z"
     }
   ]
 }
