@@ -1,43 +1,13 @@
 {
   "buttons" : [
     {
-      "colorHex" : "#FFD600",
+      "colorHex" : "#0091FF",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "🚽",
-      "id" : "7B33CFFC-15E7-4E4E-A887-4452180F5913",
+      "icon" : "🚿",
+      "id" : "3EDEDDEB-96BC-4736-BC82-C3F1FF71C5EA",
       "loggingMode" : "instant",
-      "name" : "Pinkeln",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "icon" : "🛀",
-      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
-      "loggingMode" : "instant",
-      "name" : "Besetzt",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "icon" : "🛁",
-      "id" : "8028DA0F-C292-40DB-BF02-94961067918A",
-      "loggingMode" : "instant",
-      "name" : "Frei",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#B78A66",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "icon" : "💩",
-      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
-      "loggingMode" : "instant",
-      "name" : "Kaka",
+      "name" : "Dusche",
       "statKind" : "bar"
     },
     {
@@ -52,13 +22,43 @@
       "statKind" : "heatmap"
     },
     {
-      "colorHex" : "#0091FF",
+      "colorHex" : "#B78A66",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "🚿",
-      "id" : "3EDEDDEB-96BC-4736-BC82-C3F1FF71C5EA",
+      "icon" : "💩",
+      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
       "loggingMode" : "instant",
-      "name" : "Dusche",
+      "name" : "Kaka",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#FFD600",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "🚽",
+      "id" : "7B33CFFC-15E7-4E4E-A887-4452180F5913",
+      "loggingMode" : "instant",
+      "name" : "Pinkeln",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "🛁",
+      "id" : "8028DA0F-C292-40DB-BF02-94961067918A",
+      "loggingMode" : "instant",
+      "name" : "Frei",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "🛀",
+      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
+      "loggingMode" : "instant",
+      "name" : "Besetzt",
       "statKind" : "bar"
     },
     {
@@ -73,7 +73,7 @@
       "statKind" : "heatmap"
     }
   ],
-  "exportedAt" : "2026-08-12T13:16:26Z",
+  "exportedAt" : "2026-08-12T13:44:47Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -110,54 +110,21 @@
       "groupName" : "Badezimmer",
       "id" : "79D6C2F3-A994-4DF2-90CE-9A2BAEA33EAC",
       "startDate" : "2026-08-12T09:17:39Z"
+    },
+    {
+      "buttonId" : "688CD841-9953-4039-8EDF-236A35B48CCB",
+      "buttonName" : "Felix",
+      "groupName" : "Badezimmer",
+      "id" : "7445FFC2-0C25-4E15-8251-72A946F3FDE9",
+      "startDate" : "2026-08-12T13:16:39Z"
     }
   ],
   "schemaVersion" : 1,
   "wellbeingEntries" : [
     {
-      "id" : "BBFBA735-5361-4470-8AD1-0A7CC72B08C2",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:54:26Z"
-    },
-    {
-      "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:41:47Z"
-    },
-    {
-      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:42:33Z"
-    },
-    {
-      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:48:33Z"
-    },
-    {
-      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:40:06Z"
-    },
-    {
-      "id" : "7162B01F-CC35-4C4B-82A0-515EEC1FC239",
-      "score" : 3,
-      "timestamp" : "2026-08-11T22:11:58Z"
-    },
-    {
-      "id" : "846126C7-B08E-46CC-8D7E-46A85408C40A",
-      "score" : 2,
-      "timestamp" : "2026-08-11T22:23:58Z"
-    },
-    {
       "id" : "D5DB25B3-1C75-4C7E-A96F-3E94C9FC9798",
       "score" : 2,
       "timestamp" : "2026-08-11T22:59:15Z"
-    },
-    {
-      "id" : "9F0BC044-495E-4080-A0FF-320B18EFDD85",
-      "score" : 3,
-      "timestamp" : "2026-08-11T23:22:15Z"
     },
     {
       "id" : "8DD1E70A-BE55-482C-9762-AEFB1CBEBFA9",
@@ -165,9 +132,29 @@
       "timestamp" : "2026-08-12T08:47:27Z"
     },
     {
-      "id" : "BB3A2CEF-5AD1-413C-9347-5373D36EDCAD",
+      "id" : "A88D1860-6598-4207-B3AA-F70E5AAA3D0B",
+      "score" : 3,
+      "timestamp" : "2026-08-12T13:44:45Z"
+    },
+    {
+      "id" : "BBFBA735-5361-4470-8AD1-0A7CC72B08C2",
       "score" : 2,
-      "timestamp" : "2026-08-12T09:17:32Z"
+      "timestamp" : "2026-08-11T21:54:26Z"
+    },
+    {
+      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:40:06Z"
+    },
+    {
+      "id" : "846126C7-B08E-46CC-8D7E-46A85408C40A",
+      "score" : 2,
+      "timestamp" : "2026-08-11T22:23:58Z"
+    },
+    {
+      "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:41:47Z"
     },
     {
       "id" : "85A88EDE-F8D5-4242-BC4C-58B5C32EA3A8",
@@ -175,9 +162,34 @@
       "timestamp" : "2026-08-12T09:52:26Z"
     },
     {
+      "id" : "9F0BC044-495E-4080-A0FF-320B18EFDD85",
+      "score" : 3,
+      "timestamp" : "2026-08-11T23:22:15Z"
+    },
+    {
+      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:48:33Z"
+    },
+    {
+      "id" : "7162B01F-CC35-4C4B-82A0-515EEC1FC239",
+      "score" : 3,
+      "timestamp" : "2026-08-11T22:11:58Z"
+    },
+    {
+      "id" : "BB3A2CEF-5AD1-413C-9347-5373D36EDCAD",
+      "score" : 2,
+      "timestamp" : "2026-08-12T09:17:32Z"
+    },
+    {
       "id" : "38446DEF-C752-4E51-B59A-89BC7BC8314B",
       "score" : 2,
       "timestamp" : "2026-08-12T13:15:02Z"
+    },
+    {
+      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:42:33Z"
     }
   ]
 }
