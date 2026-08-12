@@ -4,10 +4,10 @@
       "colorHex" : "#3B82F6",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "🛁",
-      "id" : "8028DA0F-C292-40DB-BF02-94961067918A",
+      "icon" : "🛀",
+      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
       "loggingMode" : "instant",
-      "name" : "Frei",
+      "name" : "Besetzt",
       "statKind" : "bar"
     },
     {
@@ -19,6 +19,59 @@
       "loggingMode" : "instant",
       "name" : "Dusche",
       "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#FF8D28",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "heatmapMaxFrequency" : 5,
+      "icon" : "👻",
+      "id" : "688CD841-9953-4039-8EDF-236A35B48CCB",
+      "loggingMode" : "instant",
+      "name" : "Felix",
+      "statKind" : "heatmap"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "D8DA43FB-2D3D-44EF-A5FC-31960B8059D8",
+      "groupName" : "Essen",
+      "icon" : "🥔",
+      "id" : "506D6C8C-AFCA-4CB6-9CF1-588060B89A55",
+      "loggingMode" : "instant",
+      "name" : "Kartoffelsalat",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "heatmapMaxFrequency" : 2,
+      "icon" : "🪥",
+      "id" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
+      "loggingMode" : "instant",
+      "name" : "Zapupa",
+      "statKind" : "heatmap"
+    },
+    {
+      "colorHex" : "#B78A66",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "💩",
+      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
+      "loggingMode" : "instant",
+      "name" : "Kaka",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#34C759",
+      "groupId" : "5C5B4A62-00B3-4277-A18D-CD7E2B44787B",
+      "groupName" : "Menschen",
+      "heatmapMaxFrequency" : 2,
+      "icon" : "",
+      "id" : "5181014F-430E-478C-AB61-BAF1C53A9E27",
+      "loggingMode" : "timed",
+      "name" : "Viola",
+      "statKind" : "heatmap"
     },
     {
       "colorHex" : "#FFD600",
@@ -34,42 +87,10 @@
       "colorHex" : "#3B82F6",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "🛀",
-      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
+      "icon" : "🛁",
+      "id" : "8028DA0F-C292-40DB-BF02-94961067918A",
       "loggingMode" : "instant",
-      "name" : "Besetzt",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "heatmapMaxFrequency" : 2,
-      "icon" : "🪥",
-      "id" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
-      "loggingMode" : "instant",
-      "name" : "Zapupa",
-      "statKind" : "heatmap"
-    },
-    {
-      "colorHex" : "#FF8D28",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "heatmapMaxFrequency" : 5,
-      "icon" : "👻",
-      "id" : "688CD841-9953-4039-8EDF-236A35B48CCB",
-      "loggingMode" : "instant",
-      "name" : "Felix",
-      "statKind" : "heatmap"
-    },
-    {
-      "colorHex" : "#B78A66",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "icon" : "💩",
-      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
-      "loggingMode" : "instant",
-      "name" : "Kaka",
+      "name" : "Frei",
       "statKind" : "bar"
     },
     {
@@ -83,7 +104,7 @@
       "statKind" : "bar"
     }
   ],
-  "exportedAt" : "2026-08-12T13:45:55Z",
+  "exportedAt" : "2026-08-12T13:47:08Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -96,6 +117,12 @@
       "name" : "Essen",
       "showsPieChart" : true,
       "sortOrder" : 1
+    },
+    {
+      "id" : "5C5B4A62-00B3-4277-A18D-CD7E2B44787B",
+      "name" : "Menschen",
+      "showsPieChart" : true,
+      "sortOrder" : 2
     }
   ],
   "logEntries" : [
