@@ -42,7 +42,7 @@
       "statKind" : "bar"
     }
   ],
-  "exportedAt" : "2026-08-11T23:23:23Z",
+  "exportedAt" : "2026-08-12T08:47:29Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -70,6 +70,16 @@
   "schemaVersion" : 1,
   "wellbeingEntries" : [
     {
+      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:48:33Z"
+    },
+    {
+      "id" : "7162B01F-CC35-4C4B-82A0-515EEC1FC239",
+      "score" : 3,
+      "timestamp" : "2026-08-11T22:11:58Z"
+    },
+    {
       "id" : "BBFBA735-5361-4470-8AD1-0A7CC72B08C2",
       "score" : 2,
       "timestamp" : "2026-08-11T21:54:26Z"
@@ -78,26 +88,6 @@
       "id" : "1DAB368E-4528-4B1F-AA0B-89CFEC810AF2",
       "score" : 2,
       "timestamp" : "2026-08-11T21:41:47Z"
-    },
-    {
-      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:42:33Z"
-    },
-    {
-      "id" : "0D8E5018-1FA5-4D53-9CC0-FBD40C2112B0",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:48:33Z"
-    },
-    {
-      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
-      "score" : 2,
-      "timestamp" : "2026-08-11T21:40:06Z"
-    },
-    {
-      "id" : "7162B01F-CC35-4C4B-82A0-515EEC1FC239",
-      "score" : 3,
-      "timestamp" : "2026-08-11T22:11:58Z"
     },
     {
       "id" : "846126C7-B08E-46CC-8D7E-46A85408C40A",
@@ -110,9 +100,24 @@
       "timestamp" : "2026-08-11T22:59:15Z"
     },
     {
+      "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:42:33Z"
+    },
+    {
+      "id" : "54C21AA9-4AEA-49AE-A9F1-917890CD048C",
+      "score" : 2,
+      "timestamp" : "2026-08-11T21:40:06Z"
+    },
+    {
       "id" : "9F0BC044-495E-4080-A0FF-320B18EFDD85",
       "score" : 3,
       "timestamp" : "2026-08-11T23:22:15Z"
+    },
+    {
+      "id" : "8DD1E70A-BE55-482C-9762-AEFB1CBEBFA9",
+      "score" : 2,
+      "timestamp" : "2026-08-12T08:47:27Z"
     }
   ]
 }
