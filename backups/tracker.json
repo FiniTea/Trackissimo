@@ -135,7 +135,7 @@
       "statKind" : "bar"
     }
   ],
-  "exportedAt" : "2026-08-13T11:48:49Z",
+  "exportedAt" : "2026-08-13T12:18:53Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -317,6 +317,20 @@
       "groupName" : "Badezimmer",
       "id" : "B88446C2-440F-4830-B727-257D0E073CCB",
       "startDate" : "2026-08-13T10:52:26Z"
+    },
+    {
+      "buttonId" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
+      "buttonName" : "Kaka",
+      "groupName" : "Badezimmer",
+      "id" : "B6CE870B-D62C-42DE-BA27-E7F6F5A536DD",
+      "startDate" : "2026-08-13T11:49:19Z"
+    },
+    {
+      "buttonId" : "8028DA0F-C292-40DB-BF02-94961067918A",
+      "buttonName" : "Frei",
+      "groupName" : "Badezimmer",
+      "id" : "D0C51D43-FE6F-4B6F-AD19-EC0A1048DBB8",
+      "startDate" : "2026-08-13T11:49:19Z"
     }
   ],
   "schemaVersion" : 1,
@@ -450,6 +464,11 @@
       "id" : "3B0E7F14-96B5-4663-BCD9-BB0539C0205E",
       "score" : 3,
       "timestamp" : "2026-08-13T10:52:24Z"
+    },
+    {
+      "id" : "DD5BD178-872A-4440-900D-41EE952CEDA6",
+      "score" : 3,
+      "timestamp" : "2026-08-13T11:48:57Z"
     }
   ]
 }
