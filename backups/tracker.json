@@ -145,7 +145,7 @@
       "statKind" : "bar"
     }
   ],
-  "exportedAt" : "2026-08-14T16:25:41Z",
+  "exportedAt" : "2026-08-15T08:01:16Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -446,6 +446,20 @@
       "groupName" : "Badezimmer",
       "id" : "4C049A38-3EF4-4A69-9E5E-A4E11A5766A8",
       "startDate" : "2026-08-14T16:21:58Z"
+    },
+    {
+      "buttonId" : "7B33CFFC-15E7-4E4E-A887-4452180F5913",
+      "buttonName" : "Pinkeln",
+      "groupName" : "Badezimmer",
+      "id" : "7BFB4588-1DFB-4B44-9790-9698CE0E2B58",
+      "startDate" : "2026-08-15T06:36:05Z"
+    },
+    {
+      "buttonId" : "8028DA0F-C292-40DB-BF02-94961067918A",
+      "buttonName" : "Frei",
+      "groupName" : "Badezimmer",
+      "id" : "7A77C20E-F06C-4FC1-8CD3-D586B40A9AE9",
+      "startDate" : "2026-08-15T06:36:05Z"
     }
   ],
   "schemaVersion" : 1,
@@ -619,6 +633,11 @@
       "id" : "955AF99A-4B4E-4759-8D1F-8F6977AFEE7D",
       "score" : 3,
       "timestamp" : "2026-08-14T16:21:57Z"
+    },
+    {
+      "id" : "80A1DF84-15FC-4073-9D41-689B55375B33",
+      "score" : 4,
+      "timestamp" : "2026-08-15T06:36:03Z"
     }
   ]
 }
