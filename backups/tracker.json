@@ -145,7 +145,7 @@
       "statKind" : "bar"
     }
   ],
-  "exportedAt" : "2026-08-17T10:25:47Z",
+  "exportedAt" : "2026-08-17T15:33:57Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -537,6 +537,13 @@
       "groupName" : "Badezimmer",
       "id" : "7F224584-80B5-4F81-9747-C04634E38D82",
       "startDate" : "2026-08-17T09:08:03Z"
+    },
+    {
+      "buttonId" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
+      "buttonName" : "Zapupa",
+      "groupName" : "Badezimmer",
+      "id" : "45584BDC-E6CB-4E4C-9994-966BB14EA4DC",
+      "startDate" : "2026-08-17T10:25:49Z"
     }
   ],
   "schemaVersion" : 1,
@@ -632,6 +639,11 @@
       "timestamp" : "2026-08-16T22:48:38Z"
     },
     {
+      "id" : "6CAA3A01-7771-4576-BC34-AF5F26FD85E6",
+      "score" : 3,
+      "timestamp" : "2026-08-17T10:25:45Z"
+    },
+    {
       "id" : "3C653C38-1BB2-40CE-BB75-7DFE00E0ABE0",
       "score" : 2,
       "timestamp" : "2026-08-11T21:42:33Z"
@@ -667,14 +679,14 @@
       "timestamp" : "2026-08-12T13:57:12Z"
     },
     {
+      "id" : "FBEECC00-A3A6-4D86-B438-A519EFDE1FFA",
+      "score" : 3,
+      "timestamp" : "2026-08-17T15:33:54Z"
+    },
+    {
       "id" : "2EA92047-C878-4C42-A688-8F325525E9EF",
       "score" : 5,
       "timestamp" : "2026-08-12T18:26:04Z"
-    },
-    {
-      "id" : "6CAA3A01-7771-4576-BC34-AF5F26FD85E6",
-      "score" : 3,
-      "timestamp" : "2026-08-17T10:25:45Z"
     },
     {
       "id" : "D5DB25B3-1C75-4C7E-A96F-3E94C9FC9798",
