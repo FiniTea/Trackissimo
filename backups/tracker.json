@@ -1,13 +1,34 @@
 {
   "buttons" : [
     {
-      "colorHex" : "#3B82F6",
-      "groupId" : "D8DA43FB-2D3D-44EF-A5FC-31960B8059D8",
-      "groupName" : "Essen",
-      "icon" : "🥘",
-      "id" : "2CB1A03E-EBF4-4309-A7FD-8EF5AEFD0400",
+      "colorHex" : "#0091FF",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "🚿",
+      "id" : "3EDEDDEB-96BC-4736-BC82-C3F1FF71C5EA",
       "loggingMode" : "instant",
-      "name" : "Mensa",
+      "name" : "Dusche",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "heatmapMaxFrequency" : 2,
+      "icon" : "🪥",
+      "id" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
+      "loggingMode" : "instant",
+      "name" : "Zapupa",
+      "statKind" : "heatmap"
+    },
+    {
+      "colorHex" : "#B78A66",
+      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
+      "groupName" : "Badezimmer",
+      "icon" : "💩",
+      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
+      "loggingMode" : "instant",
+      "name" : "Kaka",
       "statKind" : "bar"
     },
     {
@@ -31,23 +52,65 @@
       "statKind" : "bar"
     },
     {
-      "colorHex" : "#0091FF",
+      "colorHex" : "#3B82F6",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "🚿",
-      "id" : "3EDEDDEB-96BC-4736-BC82-C3F1FF71C5EA",
+      "icon" : "🛀",
+      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
       "loggingMode" : "instant",
-      "name" : "Dusche",
+      "name" : "Besetzt",
       "statKind" : "bar"
     },
     {
-      "colorHex" : "#B78A66",
+      "colorHex" : "#FF8D28",
       "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
       "groupName" : "Badezimmer",
-      "icon" : "💩",
-      "id" : "802A5CFC-2C56-4D3D-B428-0516D14BEAE2",
+      "heatmapMaxFrequency" : 5,
+      "icon" : "👻",
+      "id" : "688CD841-9953-4039-8EDF-236A35B48CCB",
       "loggingMode" : "instant",
-      "name" : "Kaka",
+      "name" : "Felix",
+      "statKind" : "heatmap"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "D8DA43FB-2D3D-44EF-A5FC-31960B8059D8",
+      "groupName" : "Essen",
+      "icon" : "🥘",
+      "id" : "2CB1A03E-EBF4-4309-A7FD-8EF5AEFD0400",
+      "loggingMode" : "instant",
+      "name" : "Mensa",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "D8DA43FB-2D3D-44EF-A5FC-31960B8059D8",
+      "groupName" : "Essen",
+      "icon" : "🥔",
+      "id" : "506D6C8C-AFCA-4CB6-9CF1-588060B89A55",
+      "loggingMode" : "instant",
+      "name" : "Kartoffelsalat",
+      "statKind" : "bar"
+    },
+    {
+      "colorHex" : "#34C759",
+      "groupId" : "5C5B4A62-00B3-4277-A18D-CD7E2B44787B",
+      "groupName" : "Menschen",
+      "heatmapMaxFrequency" : 2,
+      "icon" : "",
+      "id" : "5181014F-430E-478C-AB61-BAF1C53A9E27",
+      "loggingMode" : "timed",
+      "name" : "Viola",
+      "statKind" : "heatmap"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "5C5B4A62-00B3-4277-A18D-CD7E2B44787B",
+      "groupName" : "Menschen",
+      "icon" : "❤️",
+      "id" : "D4AC44FE-5382-48E8-9AAD-AD4755B49A1B",
+      "loggingMode" : "timed",
+      "name" : "Sofie",
       "statKind" : "bar"
     },
     {
@@ -60,6 +123,16 @@
       "loggingMode" : "instant",
       "name" : "Kiffen",
       "statKind" : "heatmap"
+    },
+    {
+      "colorHex" : "#3B82F6",
+      "groupId" : "AB4C71E2-1B49-4045-A3E4-A142EF2445C3",
+      "groupName" : "Serie",
+      "icon" : "👽",
+      "id" : "D7A829B5-9E2B-4FBF-A026-AA3417AA907B",
+      "loggingMode" : "instant",
+      "name" : "Marvels Agents of Shield",
+      "statKind" : "bar"
     },
     {
       "colorHex" : "#3B82F6",
@@ -82,90 +155,18 @@
       "statKind" : "bar"
     },
     {
-      "colorHex" : "#34C759",
+      "colorHex" : "#3B82F6",
       "groupId" : "5C5B4A62-00B3-4277-A18D-CD7E2B44787B",
       "groupName" : "Menschen",
       "heatmapMaxFrequency" : 2,
-      "icon" : "",
-      "id" : "5181014F-430E-478C-AB61-BAF1C53A9E27",
-      "loggingMode" : "timed",
-      "name" : "Viola",
-      "statKind" : "heatmap"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "D8DA43FB-2D3D-44EF-A5FC-31960B8059D8",
-      "groupName" : "Essen",
-      "icon" : "🥔",
-      "id" : "506D6C8C-AFCA-4CB6-9CF1-588060B89A55",
-      "loggingMode" : "instant",
-      "name" : "Kartoffelsalat",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "AB4C71E2-1B49-4045-A3E4-A142EF2445C3",
-      "groupName" : "Serie",
-      "icon" : "👽",
-      "id" : "D7A829B5-9E2B-4FBF-A026-AA3417AA907B",
-      "loggingMode" : "instant",
-      "name" : "Marvels Agents of Shield",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "heatmapMaxFrequency" : 2,
-      "icon" : "🪥",
-      "id" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
-      "loggingMode" : "instant",
-      "name" : "Zapupa",
-      "statKind" : "heatmap"
-    },
-    {
-      "colorHex" : "#FF8D28",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "heatmapMaxFrequency" : 5,
-      "icon" : "👻",
-      "id" : "688CD841-9953-4039-8EDF-236A35B48CCB",
-      "loggingMode" : "instant",
-      "name" : "Felix",
-      "statKind" : "heatmap"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "5C5B4A62-00B3-4277-A18D-CD7E2B44787B",
-      "groupName" : "Menschen",
-      "icon" : "❤️",
-      "id" : "D4AC44FE-5382-48E8-9AAD-AD4755B49A1B",
-      "loggingMode" : "timed",
-      "name" : "Sofie",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
-      "groupName" : "Badezimmer",
-      "icon" : "🛀",
-      "id" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
-      "loggingMode" : "instant",
-      "name" : "Besetzt",
-      "statKind" : "bar"
-    },
-    {
-      "colorHex" : "#3B82F6",
-      "groupId" : "5C5B4A62-00B3-4277-A18D-CD7E2B44787B",
-      "groupName" : "Menschen",
       "icon" : "👥",
       "id" : "5815D0CD-9B2B-4004-B925-1E861F9897A8",
-      "loggingMode" : "instant",
+      "loggingMode" : "timed",
       "name" : "Johnny",
-      "statKind" : "bar"
+      "statKind" : "heatmap"
     }
   ],
-  "exportedAt" : "2026-08-18T11:49:25Z",
+  "exportedAt" : "2026-08-18T12:10:53Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -620,6 +621,21 @@
       "groupName" : "Badezimmer",
       "id" : "E2BAE5AD-BC58-4E6A-A5D3-82E9A3CE94A9",
       "startDate" : "2026-08-18T11:48:00Z"
+    },
+    {
+      "buttonId" : "0F249EAA-24CB-44D2-BFE4-39C742D1DD98",
+      "buttonName" : "Brot",
+      "groupName" : "Essen",
+      "id" : "1100A2AF-8539-4C9B-A29A-D8913194F85D",
+      "startDate" : "2026-08-18T11:49:27Z"
+    },
+    {
+      "buttonId" : "5815D0CD-9B2B-4004-B925-1E861F9897A8",
+      "buttonName" : "Johnny",
+      "endDate" : "2026-08-18T11:00:00Z",
+      "groupName" : "Menschen",
+      "id" : "D0409C9B-E250-4FEE-8316-934261D45B2A",
+      "startDate" : "2026-08-18T09:30:00Z"
     }
   ],
   "schemaVersion" : 1,
