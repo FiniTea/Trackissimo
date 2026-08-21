@@ -166,7 +166,7 @@
       "statKind" : "heatmap"
     }
   ],
-  "exportedAt" : "2026-08-20T12:13:16Z",
+  "exportedAt" : "2026-08-21T00:14:54Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -769,6 +769,41 @@
       "groupName" : "Badezimmer",
       "id" : "12452001-2CD3-4C77-9268-50A719EE5793",
       "startDate" : "2026-08-20T12:10:03Z"
+    },
+    {
+      "buttonId" : "8028DA0F-C292-40DB-BF02-94961067918A",
+      "buttonName" : "Frei",
+      "groupName" : "Badezimmer",
+      "id" : "E5167B62-EDD1-445E-893B-1DF746A44357",
+      "startDate" : "2026-08-20T14:49:13Z"
+    },
+    {
+      "buttonId" : "7B33CFFC-15E7-4E4E-A887-4452180F5913",
+      "buttonName" : "Pinkeln",
+      "groupName" : "Badezimmer",
+      "id" : "B7CE1CC3-596C-4394-805D-BAAA23F301E3",
+      "startDate" : "2026-08-20T14:49:12Z"
+    },
+    {
+      "buttonId" : "7B33CFFC-15E7-4E4E-A887-4452180F5913",
+      "buttonName" : "Pinkeln",
+      "groupName" : "Badezimmer",
+      "id" : "6B94C7A4-6DD4-47E1-958F-720038E1344A",
+      "startDate" : "2026-08-21T00:14:50Z"
+    },
+    {
+      "buttonId" : "8028DA0F-C292-40DB-BF02-94961067918A",
+      "buttonName" : "Frei",
+      "groupName" : "Badezimmer",
+      "id" : "2374D64E-3338-4B54-8134-64481BC0FBAC",
+      "startDate" : "2026-08-21T00:14:50Z"
+    },
+    {
+      "buttonId" : "36D75A9A-1779-40BE-9F62-82FCB2C5807B",
+      "buttonName" : "Zapupa",
+      "groupName" : "Badezimmer",
+      "id" : "264D358E-E2CA-4AC3-9FE1-9E4C2AD1E074",
+      "startDate" : "2026-08-21T00:14:51Z"
     }
   ],
   "schemaVersion" : 1,
@@ -1052,6 +1087,16 @@
       "id" : "2A122E3A-11BC-4E54-867E-29EB1ACE2BC1",
       "score" : 2,
       "timestamp" : "2026-08-20T12:10:02Z"
+    },
+    {
+      "id" : "92A26E35-667C-466A-9566-118D4B4AAA58",
+      "score" : 4,
+      "timestamp" : "2026-08-20T14:49:11Z"
+    },
+    {
+      "id" : "74C4F36D-EA39-4E7F-B7AB-0F8618CF4A2E",
+      "score" : 4,
+      "timestamp" : "2026-08-21T00:14:49Z"
     }
   ]
 }
