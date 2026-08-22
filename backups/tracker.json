@@ -166,7 +166,7 @@
       "statKind" : "heatmap"
     }
   ],
-  "exportedAt" : "2026-08-22T09:48:06Z",
+  "exportedAt" : "2026-08-22T10:13:01Z",
   "groups" : [
     {
       "id" : "935E573F-0BE9-460E-BF9E-0D5EFAE458C0",
@@ -860,6 +860,13 @@
       "groupName" : "Badezimmer",
       "id" : "614C91EE-6922-41B5-9244-11F3123F1CD1",
       "startDate" : "2026-08-22T00:33:03Z"
+    },
+    {
+      "buttonId" : "B1C73B55-5909-4AFD-98C9-4FAB8720CA62",
+      "buttonName" : "Besetzt",
+      "groupName" : "Badezimmer",
+      "id" : "21D069B0-AE8B-4A4C-ABCC-58277D2CB082",
+      "startDate" : "2026-08-22T09:48:11Z"
     }
   ],
   "schemaVersion" : 1,
@@ -1158,6 +1165,11 @@
       "id" : "AA21B0C8-D8C9-4849-A183-C8E5CCF362CE",
       "score" : 4,
       "timestamp" : "2026-08-21T10:48:08Z"
+    },
+    {
+      "id" : "F603362E-BB63-4833-81F4-11AFCBE458B8",
+      "score" : 3,
+      "timestamp" : "2026-08-22T09:48:09Z"
     }
   ]
 }
